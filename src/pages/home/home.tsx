@@ -1,19 +1,18 @@
 
-import HomeLayout from "../../components/HomeComponents/HomeLayout/homeLayout";
+import SlideText from "../../components/HomeComponents/Slider/SlideText";
 
 export default function Home() {
   return (
     <>
+   <div>
     
     <div>
-    
-    <div>
-     
+      
+      <SlideText/>
+
     </div>
-       
-       <p>masda;dmadem;wm;l</p>
-    </div>
-    
+
+   </div>
     </>
   )
 }

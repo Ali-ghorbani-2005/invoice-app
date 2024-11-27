@@ -1,5 +1,27 @@
 
 
+
+
+function Login() {
+  return (
+   <>
+   
+  <div>
+    <p>login</p>
+  </div>
+
+   </>
+  )
+}
+
+export default Login
+
+
+
+
+
+
+
 // import { useNavigate, Link } from 'react-router-dom';
 // import { useForm } from 'react-hook-form';
 // import { loginUser } from '../../services/authServices';

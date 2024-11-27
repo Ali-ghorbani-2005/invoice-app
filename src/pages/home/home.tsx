@@ -1,9 +1,19 @@
 
+import HomeLayout from "../../components/HomeComponents/HomeLayout/homeLayout";
 
-export default function home() {
+export default function Home() {
   return (
+    <>
+    
     <div>
-      <p>home</p>
+    
+    <div>
+     
     </div>
+       
+       <p>masda;dmadem;wm;l</p>
+    </div>
+    
+    </>
   )
 }

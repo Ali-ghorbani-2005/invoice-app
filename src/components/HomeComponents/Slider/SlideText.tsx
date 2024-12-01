@@ -1,11 +1,11 @@
 // SlideText.tsx
-import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { SlickSettings } from '../../../types/type';
 
-const SlideText: React.FC = () => {
-    const settings = {
+const SlideText = () => {
+    const settings: SlickSettings = {
         dots: true,
         infinite: true,
         speed: 500,
@@ -29,9 +29,9 @@ const SlideText: React.FC = () => {
             <img src="imgs/icons/icons-parchment.png" className='w-10' alt="" />
             <p>امکان ثبت تاریخ</p>
         </div>
-        , 
-        <div className='flex justify-center items-center gap-3'> 
-             <img src="imgs/icons/icons-update.png" className='w-10' alt="" />
+        ,
+        <div className='flex justify-center items-center gap-3'>
+            <img src="imgs/icons/icons-update.png" className='w-10' alt="" />
             <p> امکان بروز رسانی در سریع ترین زمان ممکن </p>
         </div>
         ,

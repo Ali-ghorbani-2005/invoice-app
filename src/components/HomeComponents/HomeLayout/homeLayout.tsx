@@ -1,11 +1,14 @@
 import { Outlet, NavLink } from 'react-router-dom';
 import "./homeLayout.css"
-// import { boolean, string } from 'yup';
+import AuthButtons from '../AuthButtons/AuthButtons';
+import SideBar from '../sideBar/sideBar';
+// import { boolean, string } from 'yup'; 
+
 
 export default function HomeLayout() {
   return (
     <div>
-      <nav className='flex justify-center items-center gap-10 mt-5'>
+      {/* <nav className='flex justify-center items-center gap-10 mt-5'>
 
         <div>
           <NavLink to='/'>
@@ -35,7 +38,20 @@ export default function HomeLayout() {
           </NavLink>
 
         </div>
-      </nav>
+      </nav> */} 
+
+      <div>
+        
+        <div>
+         <AuthButtons/>
+        </div> 
+
+        <div className='flex justify-end'>
+          <SideBar/>
+        </div>
+
+
+      </div>
 
       <main>
         <Outlet />

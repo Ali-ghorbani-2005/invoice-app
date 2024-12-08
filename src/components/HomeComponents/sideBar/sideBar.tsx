@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
 const SideBar = () => {
@@ -14,9 +15,9 @@ const SideBar = () => {
                 <div className="p-4">
                     <h2 className="text-lg font-bold">Sidebar</h2>
                     <ul>
-                        <li className="py-2">Item 1</li>
-                        <li className="py-2">Item 2</li>
-                        <li className="py-2">Item 3</li>
+                        <li className="py-2 text-right">ثبت فاکتور جدید</li>
+                        <li className="py-2 text-right">مشاهده همه فاکتور ها</li>
+                        <Link to="/aboutUs"> <li className="py-2 text-right">در باره ما</li> </Link>
                     </ul>
                     <button
                         onClick={toggleSidebar}

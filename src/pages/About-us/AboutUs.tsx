@@ -5,7 +5,7 @@ export default function AboutUs() {
     <>
     <div>
 
-        <p>AboutUs</p>
+        <p></p>
     </div>
     
     </>

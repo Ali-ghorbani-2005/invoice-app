@@ -39,10 +39,15 @@ export default function HomeLayout() {
 
         </div>
       </nav> */} 
+          
+          <div className='flex justify-end mr-5 mt-3 '>
+          <img src="imgs/icons/brande-1.jpeg" className='w-20 rounded-lg' alt="" />
+        </div>
+      <div> 
 
-      <div>
+       
         
-        <div>
+        <div className='-mt-16'>
          <AuthButtons/>
         </div> 
 
@@ -53,8 +58,10 @@ export default function HomeLayout() {
 
       </div>
 
-      <main>
-        <Outlet />
+      <main> 
+        <div className='-mt-[550px]'>
+        <Outlet  /> 
+        </div>
       </main>
     </div>
   );

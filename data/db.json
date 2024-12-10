@@ -1,20 +1,12 @@
 {
-    "login": [
-        {
-            "id": 1,
-            "name": "Ali",
-            "lastName": "ghorbani",
-            "email": "ali.ghorbani.@gmail.com",
-            "password": "001384",
-            "age": 20,
-            "contacts": [
-                {
-                    "id": 1,
-                    "name": "ahad",
-                    "phone": "09123498738",
-                    "email": "ahad.ghorbani.@gmail.com"
-                }
-            ]
-        }
-    ]
+  "User": [
+    {
+      "id": 1,
+      "name": "Ali",
+      "lastName": "ghorbani",
+      "email": "ali.ghorbani.@gmail.com",
+      "password": "001384",
+      "phone": "09123498738"
+    }
+  ]
 }

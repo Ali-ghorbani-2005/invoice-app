@@ -1,4 +1,4 @@
-import { Outlet, NavLink } from 'react-router-dom';
+import { Outlet, Link } from 'react-router-dom';
 import "./homeLayout.css"
 import AuthButtons from '../AuthButtons/AuthButtons';
 import SideBar from '../sideBar/sideBar';
@@ -41,7 +41,7 @@ export default function HomeLayout() {
       </nav> */} 
           
           <div className='flex justify-end mr-5 mt-3 '>
-          <img src="imgs/icons/brande-1.jpeg" className='w-20 rounded-lg' alt="" />
+         <Link to="/"> <img src="imgs/icons/brande-1.jpeg" className='w-20 rounded-lg' alt="" /> </Link> 
         </div>
       <div> 
 

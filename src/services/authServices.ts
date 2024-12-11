@@ -21,7 +21,51 @@ export const loginUser = async (email: STRING, password: NUMBER) => {
         return { success: false, message: 'خطا در برقراری ارتباط با سرور.' };
     }
 
-}; 
+};
 
+
+
+
+// useSignUp.ts
+import { useForm } from 'react-hook-form';
+import * as yup from 'yup';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { useNavigate } from 'react-router-dom';
+
+export const useSignUp = () => {
+    const navigate = useNavigate();
+
+    const Validation = yup.object().shape({
+        name: yup.string().required("وارد کردن اسم الزامی است"),
+        lastName: yup.string().required("وارد کردن فامیلی الزامی است"),
+        email: yup.string().required("وارد کردن ایمیل الزامی است"),
+        password: yup.string().required("وارد کردن رمز الزامی است"), // تغییر به string
+        phone: yup.string().required("وارد کردن شماره تلفن الزامی است") // تغییر به string
+    });
+
+    const addUser = async (data: any) => {
+        try {
+            const response = await fetch('http://localhost:3000/User', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            });
+            if (response.ok) {
+                console.log("موفق");
+                navigate('/');
+            } else {
+                console.error('خطا در ارسال درخواست:', response.statusText);
+            }
+        } catch (error) {
+            console.error('خطا:', error);
+        }
+    };
+
+    const { register, handleSubmit, formState: { errors } } = useForm({ resolver: yupResolver(Validation) });
+
+    return { register, handleSubmit, errors, addUser };
+};
 
 

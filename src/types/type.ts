@@ -21,3 +21,11 @@ export type SlickSettings = {
     slidesToScroll?: number;
     [key: string]: any; // برای اضافه کردن هر گزینه‌ی دیگر
 }
+
+
+export type InvoiceRow = {
+    description: string;
+    quantity: number | string;
+    unitPrice: number | string;
+    total: string;
+}

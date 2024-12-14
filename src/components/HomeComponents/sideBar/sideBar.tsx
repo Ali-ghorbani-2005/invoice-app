@@ -50,8 +50,10 @@ const SideBar = () => {
                         &times;
                     </button>
                 </div>
-                <ul className="p-4">
-                    <li className="py-2 text-right hover:bg-gray-700 rounded cursor-pointer">ثبت فاکتور جدید</li>
+                <ul className="p-4"> 
+                    <Link to='/addInvoice'>
+                    <li className="py-2 text-right hover:bg-gray-700 rounded cursor-pointer">ثبت فاکتور جدید</li> 
+                    </Link>
                     <li className="py-2 text-right hover:bg-gray-700 rounded cursor-pointer">مشاهده همه فاکتور ها</li>
                     <Link to="/aboutUs">
                         <li className="py-2 text-right hover:bg-gray-700 rounded cursor-pointer">در باره ما</li>

@@ -26,7 +26,7 @@
 
 
 
-import {  STRING } from '../types/type';
+import { STRING } from '../types/type';
 
 const ApiUrl = 'http://localhost:3000/User';
 

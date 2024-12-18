@@ -1,26 +1,50 @@
-import { NUMBER, STRING } from "../types/type";
+// import { NUMBER, STRING } from '../types/type';
 
-const ApiUrl = ' http://localhost:3000/login';
+// const ApiUrl = ' http://localhost:3000/User';
 
-export const loginUser = async (email: STRING, password: NUMBER) => {
+// export const loginUser = async (email: STRING, password: NUMBER) => {
+//     try {
+//         const response = await fetch(ApiUrl)
+//         const data = await response.json();
+
+//         // const user = data.find(user => user.email === email && user.password === password); 
+//         const user = (data as Array<{ email: STRING; password: NUMBER }>).find(user => user.email === email && user.password === password);
+//         if (user) {
+//             return { success: true, message: 'ورود موفق' }
+//         } else {
+//             return { success: false, message: 'ورود ناموفق' }
+//         }
+//     }
+
+//     catch (error) {
+//         console.error('Error:', error);
+//         return { success: false, message: 'خطا در برقراری ارتباط با سرور.' };
+//     }
+
+// }; 
+
+
+
+
+import {  STRING } from '../types/type';
+
+const ApiUrl = 'http://localhost:3000/User';
+
+export const loginUser = async (email: STRING, password: STRING) => {
     try {
-        const response = await fetch(ApiUrl)
+        const response = await fetch(ApiUrl);
         const data = await response.json();
 
-        // const user = data.find(user => user.email === email && user.password === password); 
-        const user = (data as Array<{ email: STRING; password: NUMBER }>).find(user => user.email === email && user.password === password);
+        const user = (data as Array<{ email: STRING; password: STRING }>).find(user => user.email === email && user.password === password);
         if (user) {
-            return { success: true, message: 'ورود موفق' }
+            return { success: true, message: 'ورود موفق' };
         } else {
-            return { success: false, message: 'ورود ناموفق' }
+            return { success: false, message: 'ورود ناموفق' };
         }
-    }
-
-    catch (error) {
+    } catch (error) {
         console.error('Error:', error);
         return { success: false, message: 'خطا در برقراری ارتباط با سرور.' };
     }
-
 };
 
 
@@ -31,6 +55,7 @@ import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useNavigate } from 'react-router-dom';
+
 
 export const useSignUp = () => {
     const navigate = useNavigate();

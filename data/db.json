@@ -8,5 +8,27 @@
       "password": "001384",
       "phone": "09123498738"
     }
+  ],
+  "invoice": [
+    {
+      "id": 1, 
+      "date": "1402-10-10", 
+      "phone": "09123456789", 
+      "sellerName": "Ali",
+      "rows": [
+        {
+          "description": "کالا 1", 
+          "quantity": "2",
+          "unitPrice": "10000", 
+          "total": "20000" 
+        },
+        {
+          "description": "کالا 2",
+          "quantity": "1",
+          "unitPrice": "15000",
+          "total": "15000"
+        }
+      ]
+    }
   ]
 }

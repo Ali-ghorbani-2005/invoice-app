@@ -23,9 +23,17 @@ export type SlickSettings = {
 }
 
 
-export type InvoiceRow = {
-    description: string;
-    quantity: number | string;
-    unitPrice: number | string;
-    total: string;
+// export type InvoiceRow = {
+//     description: string;
+//     quantity: number | string;
+//     unitPrice: number | string;
+//     total: string;
+// }
+ // types/type.ts
+
+export interface InvoiceRow {
+    description: string; // شرح کالا
+    quantity: string;    // تعداد (به صورت رشته)
+    unitPrice: string;   // قیمت واحد (به صورت رشته)
+    total: string;       // مبلغ کل (به صورت رشته)
 }

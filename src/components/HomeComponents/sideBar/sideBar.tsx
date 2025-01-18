@@ -29,6 +29,12 @@ const SideBar = () => {
                     </Link>
                     <Link to="/aboutUs">
                         <li className="py-2 text-right hover:bg-gray-700 rounded cursor-pointer">در باره ما</li>
+                    </Link> 
+
+                    <Link to='/'>
+                     
+                     <li className="py-2 text-right hover:bg-gray-700 rounded cursor-pointer">بازگشت به خانه </li>
+                    
                     </Link>
                 </ul>
             </div>
